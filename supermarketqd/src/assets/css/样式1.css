@@ -1,0 +1,215 @@
+/* body {
+	overflow-x: hidden;
+} */
+
+
+
+/* 通配符 消除浏览器和所有标签默认内外边距 */
+* {
+	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* 清除浮动 */
+.qingchu {
+	clear: both;
+}
+
+
+/* 顶部1  顶部两行 */
+/* .dingbu1 td {
+	display: block;
+	float: left;
+	width: 50%;
+	text-align: center;
+} */
+
+/* .dingbu1 {
+	width: 100%;
+} */
+
+/* .dingbu1 tr {
+	width: 100%;
+} 
+.dingbu1 tr td:first-child{
+	display: block;
+	text-align: center;
+}
+
+.dingbu1 tr td:last-child{
+	margin-left: 15%;
+	padding-left: 15%;
+}
+*/
+
+
+/* 顶部2 顶部到导航栏之间 */
+/* .dingbu2 {
+	margin-left: 15%;
+	width: 82%;
+	text-align: left;
+}  */
+
+/* .dingbu2 tr:first-child td:nth-child(odd) {
+	text-align: right;
+} */
+
+
+
+/* 导航栏 */
+/* .nav:first-child{
+	margin-left: 20%;
+} */
+
+/* 让li 无序列表横向 */
+/* .nav li {
+	display: inline;
+	float: left;
+	width: 9%;
+} */
+
+	/* 改变导航栏 鼠标放上去变灰色 */
+/* .nav li a:hover{
+	background-color: #aaff7f;
+} */
+
+/* 导航栏样式 对a标签修饰 */
+/* .nav li a{
+	color: white;
+	display: block;
+	text-align: center;
+	line-height: 52px;
+	text-decoration: none; */
+	/* width: 186px; */
+	/* height: 52px; */
+	/* padding: 0px 8px; */
+/* } */
+
+/* .daohanglan {
+	background-color: black;
+	width: 100%;
+	height: 52px;
+	text-align: center;
+	vertical-align: middle;
+} */
+
+
+/* 对所有a链接取消默认蓝色和下划线  */
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: blue;
+	/* background-color: green; */
+}
+
+
+
+/* 导航栏下 广告图片 */
+/* .banner {
+	text-align: center;
+	width: 100%;
+	background-color: #aaaa7f; */
+	/* height: 100%; */
+	/* height: 1270px; */
+/* } */
+
+/* .nav li{
+	
+	display: inline;
+	padding-left: 3%;
+	padding-right: 3%;
+	line-height: 52px;
+	line-height: 52px
+	text-align: center;
+	height: 52px;
+	width: 1000px;
+}
+ */
+
+
+/* 店铺广告 */
+/* .dianpu .zuo {
+	float: left;
+	width: 63%;
+	background-color: red; */
+	/* height: 50px; */
+/* } */
+
+/* .dianpu .you {
+	float: right;
+	width: 37%;
+	background-color: yellow; */
+	/* height: 50px; */
+/* } */
+
+/* .nav2 li {
+	float: left;
+	display: inline;
+	width: 10%;
+	margin: 5% 6% 3% 0;
+	box-sizing: border-box;
+	text-align: right */
+	/* text-align: center; */
+/* } */
+
+/* .nav2 :first-child {
+	margin-left: 34%;
+	box-sizing: border-box; */
+	/* text-align: center; */
+/* } */
+
+/* .nav2 li div:nth-child(odd),
+.nav2 li a:nth-child(odd){
+	margin-left: 0;
+	margin-bottom: 10%;
+	box-sizing: border-box;
+} */
+
+/* .nav li div:nth-child(even),
+.nav li a:nth-child(even){
+	width: 90px;
+	background-color: #aaff7f;
+} */
+
+
+
+/* 菜品展示顶部部分 */
+/* .caipindingbu {
+	text-align: center;
+	line-height: 2;
+} */
+
+
+/* 菜单名称 */
+/* .caidanmingcheng a{
+	display: inline-block;  转换成块 */
+	/* 文本居中 */
+	/* height: 45px;
+	line-height: 45px;
+	width: 12%;
+	text-align: center;
+	background-color: #aaaa7f; */
+	/* margin: 6px;  上下左右外边距为6px */
+/* } */
+
+/* .caidanmingcheng a:hover {
+	color: black;
+	background-color: green;
+} */
+
+/* .caidanmingcheng {
+	text-align: center;
+} */
+
+
+
+/* 菜单图片 */
+
+
+
+

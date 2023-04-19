@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>登录界面</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+		}
+		.container {
+			margin: auto;
+			width: 400px;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0px 0px 10px #ccc;
+			border-radius: 5px;
+			text-align: center;
+		}
+		input[type="text"], input[type="password"], input[type="email"], input[type="radio"] {
+			display: block;
+			margin: 10px auto;
+			padding: 10px;
+			width: 100%;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+		.error {
+			color: #ff0000;
+			margin-bottom: 10px;
+		}
+	</style>
+	<script>
+		function validateForm() {
+			var email = document.forms["loginForm"]["email"].value;
+			var password = document.forms["loginForm"]["password"].value;
+			var usertype = document.forms["loginForm"]["usertype"].value;
+			var error = "";
+			if (email == "") {
+				error += "Email is required.\n";
+			}
+			if (password == "") {
+				error += "Password is required.\n";
+			}
+			if (usertype == "") {
+				error += "User type is required.\n";
+			}
+			if (error != "") {
+				alert(error);
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>登录</h1>
+		<form name="loginForm" onsubmit="return validateForm()">
+			<label>邮箱：</label>
+			<input type="email" name="email">
+			<label>密码：</label>
+			<input type="password" name="password">
+			<label>用户类型：</label>
+			<input type="radio" name="usertype" value="normal">普通用户
+			<input type="radio" name="usertype" value="vip">VIP 用户
+			<input type="radio" name="usertype" value="employee">员工
+			<input type="submit" value="Login">
+		</form>
+		<a href="注册.html">Register</a>
+	</div>
+</body>
+</html>

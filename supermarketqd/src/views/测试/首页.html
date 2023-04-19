@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carousel Demo</title>
+	<style>
+		#carousel {
+			display: flex;
+			flex-wrap: nowrap;
+			overflow-x: hidden;
+		}
+
+		.carousel-item {
+			flex: 0 0 100%;
+			display: none;
+		}
+
+		.carousel-item.active {
+			display: flex;
+		}
+
+		.btn {
+			margin: 20px;
+			padding: 10px;
+			border: none;
+			background-color: #0077cc;
+			color: #fff;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="carousel">
+		<div class="carousel-item active">
+			<a href="#"><img src="image1.jpg"></a>
+		</div>
+		<div class="carousel-item">
+			<a href="#"><img src="image2.jpg"></a>
+		</div>
+		<div class="carousel-item">
+			<a href="#"><img src="image3.jpg"></a>
+		</div>
+		<div class="carousel-item">
+			<a href="#"><img src="image4.jpg"></a>
+		</div>
+		<div class="carousel-item">
+			<a href="#"><img src="image5.jpg"></a>
+		</div>
+	</div>
+	<button class="btn" id="prevBtn">Prev</button>
+	<button class="btn" id="nextBtn">Next</button>
+	<script>
+		// 获取轮播容器和轮播项
+		const carousel = document.getElementById('carousel');
+		const carouselItems = carousel.getElementsByClassName('carousel-item');
+
+		// 当前轮播项的索引
+		let currentIndex = 0;
+
+		// 自动轮播函数
+		function autoCarousel() {
+			// 隐藏当前项
+			carouselItems[currentIndex].classList.remove('active');
+
+			// 计算下一个项的索引
+			currentIndex = (currentIndex + 1) % carouselItems.length;
+
+			// 显示下一个项
+			carouselItems[currentIndex].classList.add('active');
+		}
+
+		// 开始自动轮播
+		setInterval(autoCarousel, 3000);
+
+		// 获取“上一页”和“下一页”按钮
+		const prevBtn = document.getElementById('prevBtn');
+		const nextBtn = document.getElementById('nextBtn');
+
+		// 添加事件监听器，实现手动翻页
+		prevBtn.addEventListener('click', function() {
+			// 隐藏当前项
+			carouselItems[currentIndex].classList.remove('active');
+
+			// 计算上一个项的索引
+			currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+
+			// 显示上一个项
+			carouselItems[currentIndex].classList.add('active');
+		});
+
+		nextBtn.addEventListener('click', function() {
+			// 隐藏当前项
+			carouselItems[currentIndex].classList.remove('active');
+
+			// 计算下一个项的索引
+			currentIndex = (currentIndex + 1) % carouselItems.length;
+
+			// 显示下一个项
+			carouselItems[current.currentIndex].classList.add('active');
+		});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<a href="{% url 'users:register' %}">注册</a>
+<a href="{% url 'users:login' %}">登录</a>
+<a href="{% url 'users:logout' %}">登出</a>
+<a href="{% url 'users:index' %}">主页</a>
+
+{#<a href="{% url 'users:register' %}">注册</a>#}
+{#<a href="{% url 'users:register' %}">注册</a>#}
+
+{% block content %}
+{% for item in queryset %}
+    <p>
+    {{ item.user }}-----
+    {{ item.email }}-----
+    {{ item.password }}-----
+    </p>
+{% endfor %}
+{% endblock content %}
