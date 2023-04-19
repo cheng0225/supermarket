@@ -1,0 +1,2 @@
+# supermarket
+改成django的sqlite数据库版本，方便部署到pythonanywhere
