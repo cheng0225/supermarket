@@ -20,8 +20,6 @@ class Merchants(models.Model):
 MEDIA_ADDR = 'http://localhost:8000/media/'
 
 def img_path(instance,filename):
-    # print(instance,filename)
-    # return os.path.join('ThingImg',instance.merchant,filename)
     img_name=f'{instance.number}.{filename.split(".")[-1]}'   # 文件 图片名字 完整后缀
     sj=instance.merchant.number   # 获取商家编号  因为店名不一定唯一
     return os.path.join('ThingImg',sj,img_name) # 拼接返回

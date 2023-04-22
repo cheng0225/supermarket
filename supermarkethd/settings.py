@@ -54,18 +54,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-# CORS_ALLOW_CREDENTIALS = True
+
 CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ORIGIN_WHITELIST = [
-#     # "https://www.example.com",
-#     # "http：//127.0.0.1：8080",  # 使用这个不行 操蛋了
-#     # "http://127.0.0.1:7000"
-# ]
-# CORS_ALLOW_CREDENTIALS = True  # 允许携带Cookie
-# CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ORIGIN_WHITELIST = (
-#     '*'
-# )
 
 CORS_ALLOW_METHODS = (
     # 'DELETE',
@@ -116,19 +106,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'supermarkethd.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'SSD',
-#         'HOST': '127.0.0.1',
-#         'PORT': 3306,
-#         'USER': 'root',
-#         'PASSWORD': 'root',
-#     }
-# }
 
 DATABASES = {
     'default': {
@@ -160,7 +137,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'zh-hans'  # 'en-us'
 
-TIME_ZONE = 'Asia/shanghai'  # 'UTC'
+TIME_ZONE = 'Asia/Shanghai'  # 'UTC'
 
 USE_I18N = True
 
@@ -190,24 +167,5 @@ REST_FRAMEWORK = {
     # 认证
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'public.AuthPermit.MyAuth',  # 获取登录信息
-        # 'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        # 'rest_framework.authentication.BasicAuthentication',
-        # 'rest_framework.authentication.SessionAuthentication',
-        # 'rest_framework.authentication.TokenAuthentication',
-    ),
-    # 权限
-    'DEFAULT_PERMISSION_CLASSES': (
-        # 'public.AuthPermit.UPermit',  # 查看是否登录
-        # 'rest_framework.permissions.IsAuthenticated',
     ),
 }
-# # jwt载荷中的有效期设置
-# import datetime
-# JWT_AUTH = {
-#     # token 有效期
-#     'JWT_EXPIRATION_DELTA': datetime.timedelta(hours=8),
-#     'JWT_ALLOW_REFRESH': True,
-#     # 续期有效期（该设置可在24小时内带未失效的token 进行续期）
-#     'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(hours=24),
-#
-# }
