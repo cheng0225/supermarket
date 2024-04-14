@@ -1,12 +1,12 @@
 # from django.shortcuts import render
 
+from rest_framework.generics import *
 # Create your views here.
 from rest_framework.mixins import *
-from rest_framework.views import APIView
-from home.serializer import *
-from home.models import *
-from rest_framework.generics import *
 from rest_framework.response import Response
+
+from home.serializer import *
+from public import AuthPermit
 from users.models import Employees
 
 
@@ -21,8 +21,39 @@ class ThingsView(GenericAPIView, ListModelMixin, CreateModelMixin):
         return self.list(request)
 
 
+class ThingsCartView(GenericAPIView, ListModelMixin, CreateModelMixin):
+    """ 商品视图 """
+    authentication_classes = [AuthPermit.MyAuth]  # 登录验证
+    permission_classes = []  # 不做任何权限限制
+    queryset = ShoppingCart.objects.all()
+    # queryset = ShoppingCart.objects.filter(email=1)
+    serializer_class = ShoppingSerializer
 
-from public import AuthPermit
+    def get_queryset(self):
+        # 重写筛选条件
+        # 获取当前用户的邮箱
+        email = self.request.user.email
+        # 使用邮箱进行条件筛选
+        queryset = ShoppingCart.objects.filter(email=email)
+        return queryset
+    def get(self, request):
+        return self.list(request)
+
+
+    def post(self, request):
+        # request.data._mutable = True
+        email = request.user.email
+        # emp = Employees.objects.filter(email=email).first()
+        # request.data['merchant'] = emp.merchant.number
+        # request.data['email'] = number
+        print(request.data)
+        request.data['email'] = email
+        return self.create(request)
+
+    def delete(self, request): # 未完成
+        # User.objects.get(pk=pk).delete()
+        # return Response(status=status.HTTP_200_OK)
+        return self.destroy(request)
 
 
 class AddThings(GenericAPIView, ListModelMixin, CreateModelMixin):
@@ -33,28 +64,29 @@ class AddThings(GenericAPIView, ListModelMixin, CreateModelMixin):
 
     def post(self, request):
         request.data._mutable = True
-        email =request.user.email
+        email = request.user.email
         emp = Employees.objects.filter(email=email).first()
         request.data['merchant'] = emp.merchant.number
+        request.data['latlon'] = emp.merchant.latlon
         return self.create(request)
 
-    def put(self,request):
+    def put(self, request):
         """ 更新商品信息需要管理员身份 """
-        print('put',request.data)
+        print('put', request.data)
         ser = self.get_serializer(data=request.data)
         ser.is_valid(raise_exception=True)
         return Response(ser.data)
 
-    def patch(self,request):
+    def patch(self, request):
         """ 更新部分数据  同时自动生成员工操作日志 """
         data = request.data
         data._mutable = True
         print(type(request.data.__getitem__('img')))
-        if type(data.get('img',0)) is str:
+        if type(data.get('img', 0)) is str:
             data.pop('img')
         id = data.get('id')
         things = Things.objects.filter(id=id).first()
-        ser = self.get_serializer(instance=things,data=data)
+        ser = self.get_serializer(instance=things, data=data)
         ser.is_valid(raise_exception=True)
         ser.save()
         user = request.user
@@ -66,7 +98,6 @@ class AddThings(GenericAPIView, ListModelMixin, CreateModelMixin):
         }
         Logs.objects.create(**form)
         return Response(ser.data)
-
 
 
 class MerchantsView(GenericAPIView, CreateModelMixin, UpdateModelMixin):
@@ -99,6 +130,7 @@ class MerchantsView(GenericAPIView, CreateModelMixin, UpdateModelMixin):
 class OrdersView(ListCreateAPIView):
     queryset = Orders.objects.all()
     serializer_class = OrdersSerializer
+
 
 # Log
 class LogsView(ListCreateAPIView):
@@ -135,4 +167,3 @@ class LatLon(GenericAPIView):
         merchant = Merchants.objects.filter(number=thing.merchant.number).first()
         form = MerchantsSerializer(instance=merchant)
         return Response(form.data)
-

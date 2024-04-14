@@ -65,3 +65,27 @@ export function get_logs(obj) {
         params: {obj}
     })
 }
+
+export function post_cart(obj) {
+    return request({  
+        url: '/home/things/cart',
+        method: 'post',
+        data: obj
+    })
+}
+
+export function get_cart(obj) {
+    return request ({
+        url: '/home/things/cart',
+        method: 'get',
+        params: {obj}
+    })
+}
+
+export function delete_cart(obj) {
+    return request ({
+        url: '/home/things/cart',
+        method: 'delete',
+        data: obj
+    })
+}

@@ -38,7 +38,7 @@ export default {
     methods: {
         get_start_ip() {
             const _this = this
-            var geolocation = new BMap.Geolocation();
+            var geolocation = new BMapGL.Geolocation();
             geolocation.enableSDKLocation();
             geolocation.getCurrentPosition(function (r) {
                 if (this.getStatus() == BMAP_STATUS_SUCCESS) {
@@ -48,6 +48,7 @@ export default {
                     _this.start_lng = r.point.lng
                     _this.start_lat = r.point.lat
                     console.log('get ip', _this.start_lng, _this.start_lat)
+                    _this.show()
                 }
                 else {
                     alert('failed' + this.getStatus());

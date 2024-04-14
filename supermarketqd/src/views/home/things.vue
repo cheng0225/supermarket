@@ -40,6 +40,10 @@
             </el-table-column>
             <el-table-column label="单价" prop="price" sortable>
             </el-table-column>
+            <el-table-column label="距离(米)" prop="latlon" :formatter="getDistance" sortable>
+            </el-table-column>
+            <el-table-column label="综合排序" prop="sort" :formatter="getSort" sortable>
+            </el-table-column>
             <el-table-column align="right">
                 <template slot="header" slot-scope="scope">
                     <el-input v-model="search" size="mini" placeholder="输入商品名称搜索" />
@@ -48,6 +52,7 @@
             <el-table-column align="right">
                 <template slot-scope="scope">
                     <el-button @click="go_buy(scope.row)" type="primary">前往购买</el-button>
+                    <el-button @click="add_cart(scope.row)" type="">加入购物车</el-button>
                     <el-button @click="patch_show(scope.row)">修改</el-button>
                 </template>
             </el-table-column>
@@ -83,7 +88,7 @@
                 </el-form>
             </div>
         </el-drawer>
-        
+
     </div>
 </template>
   
@@ -107,7 +112,7 @@
 </style>
     
 <script>
-import { get_things, get_latlon, patch_things } from "@/api/home.js"
+import { get_things, get_latlon, patch_things, post_cart } from "@/api/home.js"
 export default {
     data() {
         return {
@@ -122,7 +127,10 @@ export default {
             things_form: {},
             rules: {
                 txt: [{ required: true, message: '请填写备注说明', trigger: 'blur' }]
-            }
+            },
+
+            start_lng: '',
+            start_lat: '',
         }
     },
     mounted() {
@@ -181,6 +189,19 @@ export default {
                 }
             )
         },
+        add_cart(row) {
+            console.log(row);
+            post_cart(row).then(response => {
+                console.log('响应成功', response);
+                this.msg = 'succeed'
+                this.open1()
+            },
+                error => {
+                    console.log('连接服务器失败', error);
+                    this.msg = "连接服务器失败"
+                    this.open4(error.response.data)
+                })
+        },
 
         patch_show(row) {
             this.drawer1 = true
@@ -216,6 +237,50 @@ export default {
                     return false;
                 }
             })
+        },
+
+        get_start_ip() {
+            const _this = this
+            var geolocation = new BMap.Geolocation();
+            geolocation.enableSDKLocation();
+            geolocation.getCurrentPosition(function (r) {
+                if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                    // var mk = new BMap.Marker(r.point);
+                    // console.log('get ip',_this.start_lng ,_this.start_lat )
+                    alert('您的位置：' + r.point.lng + ',' + r.point.lat);
+                    _this.start_lng = r.point.lng
+                    _this.start_lat = r.point.lat
+                    console.log('get ip', _this.start_lng, _this.start_lat)
+                }
+                else {
+                    alert('failed' + this.getStatus());
+                }
+            });
+            // this.show(this.start_lng,this.start_lat)
+        },
+        getDistance(row, column, cellValue) {
+            // console.log(row);
+            const str = row["latlon"];
+            const regex = /\d+\.\d+/g;
+            const matches = str.match(regex);
+            const result = matches.map(Number);
+            var lng1 = this.start_lng || 0,
+                lat1 = this.start_lat || 0,
+                lng2 = result[0] || 0,
+                lat2 = result[1] || 0;
+            var rad1 = lat1 * Math.PI / 180.0;
+            var rad2 = lat2 * Math.PI / 180.0;
+            var a = rad1 - rad2;
+            var b = lng1 * Math.PI / 180.0 - lng2 * Math.PI / 180.0;
+            var r = 6378137;
+            var distance = r * 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(rad1) * Math.cos(rad2) * Math.pow(Math.sin(b / 2), 2)));
+            // 米
+            row["distance"] = parseInt(distance);
+            return parseInt(distance);
+        },
+        getSort(row, column, cellValue) {
+            // console.log(row, column, cellValue);
+            return parseInt(0.5 * row["distance"] + 0.5 * parseInt(row["price"]))
         },
     }
 }

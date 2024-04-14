@@ -10,6 +10,11 @@ class ThingsSerializer(ModelSerializer):
         model = Things
         fields = '__all__'
 
+class ShoppingSerializer(ModelSerializer):
+    class Meta:
+        model = ShoppingCart
+        fields = '__all__'
+
 
 class MerchantsSerializer(ModelSerializer):
     class Meta:

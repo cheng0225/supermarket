@@ -8,7 +8,8 @@ import register from '@/views/users/register'
 import things from '@/views/home/things'
 import merchants from '@/views/home/merchants'
 import logs from '@/views/home/logs'
-
+import cart from '@/views/home/cart'
+import cart_route from '@/views/home/cart_route'
 import map from '@/views/home/map'
 
 
@@ -52,6 +53,14 @@ export default new Router({
     {
       path: '/home/logs',
       component: logs
+    },
+    {
+      path: '/home/things/cart',
+      component: cart
+    },
+    {
+      path: '/cart/route',
+      component: cart_route
     },
     {
       path: '/map',

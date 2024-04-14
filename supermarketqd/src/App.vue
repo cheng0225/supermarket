@@ -22,6 +22,9 @@
               <b-navbar-item href="/#/home/logs">
                 操作日志
               </b-navbar-item>
+              <b-navbar-item href="/#/home/things/cart">
+                购物车
+              </b-navbar-item>
             </b-navbar-dropdown>
             <b-navbar-dropdown label="订单管理">
               <b-navbar-item href="#">

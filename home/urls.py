@@ -8,6 +8,7 @@ urlpatterns = [
     path('things', ThingsView.as_view()),
     path('things/add', AddThings.as_view()),
     path('things/earch', SearchView.as_view()),
+    path('things/cart', ThingsCartView.as_view()),
     path('merchants', MerchantsView.as_view()),
     path('search', SearchView.as_view()),
     path('logs', LogsView.as_view()),
