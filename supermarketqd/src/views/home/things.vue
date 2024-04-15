@@ -40,10 +40,10 @@
             </el-table-column>
             <el-table-column label="单价" prop="price" sortable>
             </el-table-column>
-            <el-table-column label="距离(米)" prop="latlon" :formatter="getDistance" v-if="false" sortable>
+            <el-table-column label="距离(米)" prop="latlon" :formatter="getDistance" v-if="true" sortable>
             </el-table-column>
-            <el-table-column label="综合排序" prop="sort" :formatter="getSort" sortable v-if="false">
-            </el-table-column>
+<!--            <el-table-column label="综合排序" prop="sort" :formatter="getSort" sortable v-if="false">-->
+<!--            </el-table-column>-->
             <el-table-column align="right">
                 <template slot="header" slot-scope="scope">
                     <el-input v-model="search" size="mini" placeholder="输入商品名称搜索" />
@@ -91,9 +91,9 @@
 
     </div>
 </template>
-  
-  
-    
+
+
+
 <style scoped>
 .demo-table-expand {
     font-size: 0;
@@ -110,7 +110,7 @@
     width: 50%;
 }
 </style>
-    
+
 <script>
 import { get_things, get_latlon, patch_things, post_cart } from "@/api/home.js"
 export default {
@@ -259,6 +259,7 @@ export default {
             });
             // this.show(this.start_lng,this.start_lat)
         },
+
         getDistance(row, column, cellValue) {
             // console.log(row);
             const str = row["latlon"];
@@ -276,14 +277,14 @@ export default {
             var r = 6378137;
             var distance = r * 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(rad1) * Math.cos(rad2) * Math.pow(Math.sin(b / 2), 2)));
             // 米
-            row["distance"] = parseInt(distance);
-            return parseInt(distance);
+            row["distance"] = parseInt(distance)-30000;
+            return  row["distance"];
         },
         getSort(row, column, cellValue) {
             // console.log(row, column, cellValue);
-            return parseInt(0.5 * row["distance"] + 0.5 * parseInt(row["price"]))
+            return parseInt(0.2 * row["distance"] + 0.8 * parseInt(row["price"]))
         },
     }
 }
 </script>
-  
+
