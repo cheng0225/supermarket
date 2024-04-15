@@ -7,13 +7,7 @@
     <list default="true" id="be10a912-2517-420c-a383-8d863eae5a16" name="Changes" comment="更新多地点路径规划">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/css/app.d29cbd106f3562ecd01698b8076eaec0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/css/app.d29cbd106f3562ecd01698b8076eaec0.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/app.15864bd58bf7f9684cf7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/app.15864bd58bf7f9684cf7.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/src/views/home/things.vue" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/views/home/things.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/src/util/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/util/request.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="24-04-14" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "24-04-14",
+    "git-widget-placeholder": "bgc",
     "last_opened_file_path": "D:/web前端/supermarket",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -134,7 +128,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="bgc" />
                       </list>
                     </value>
                   </entry>
