@@ -40,9 +40,9 @@
             </el-table-column>
             <el-table-column label="单价" prop="price" sortable>
             </el-table-column>
-            <el-table-column label="距离(米)" prop="latlon" :formatter="getDistance" sortable>
+            <el-table-column label="距离(米)" prop="latlon" :formatter="getDistance" v-if="false" sortable>
             </el-table-column>
-            <el-table-column label="综合排序" prop="sort" :formatter="getSort" sortable>
+            <el-table-column label="综合排序" prop="sort" :formatter="getSort" sortable v-if="false">
             </el-table-column>
             <el-table-column align="right">
                 <template slot="header" slot-scope="scope">
@@ -134,7 +134,7 @@ export default {
         }
     },
     mounted() {
-        this.show_things()
+        this.get_start_ip()
     },
     methods: {
         handleClose(done) {
@@ -251,6 +251,7 @@ export default {
                     _this.start_lng = r.point.lng
                     _this.start_lat = r.point.lat
                     console.log('get ip', _this.start_lng, _this.start_lat)
+                    _this.show_things()
                 }
                 else {
                     alert('failed' + this.getStatus());

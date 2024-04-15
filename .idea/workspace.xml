@@ -4,41 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be10a912-2517-420c-a383-8d863eae5a16" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/supermarkethd.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/超市系统.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0002_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+    <list default="true" id="be10a912-2517-420c-a383-8d863eae5a16" name="Changes" comment="更新多地点路径规划">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supermarketqd/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/css/app.e0709be38574379975d972d4898c15b9.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/css/app.e0709be38574379975d972d4898c15b9.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/app.90de8ecc04f533a5792d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/app.90de8ecc04f533a5792d.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/css/app.d29cbd106f3562ecd01698b8076eaec0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/css/app.d29cbd106f3562ecd01698b8076eaec0.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/app.15864bd58bf7f9684cf7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/app.15864bd58bf7f9684cf7.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/vendor.dc5e454dbdb8f4e7ec50.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/vendor.dc5e454dbdb8f4e7ec50.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/src/api/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/api/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/src/util/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/util/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/src/views/home/map.vue" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/views/home/map.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supermarketqd/src/views/home/things.vue" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/views/home/things.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -72,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "24-04-14",
     "last_opened_file_path": "D:/web前端/supermarket",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -80,6 +60,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.file-colors",
+    "ts.external.directory.path": "D:\\app\\PyCharm 2023.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -125,8 +106,18 @@
       <workItem from="1712561727824" duration="9278000" />
       <workItem from="1712670617851" duration="505000" />
       <workItem from="1712740907257" duration="6021000" />
-      <workItem from="1712984351250" duration="9584000" />
+      <workItem from="1712984351250" duration="11774000" />
+      <workItem from="1713153308597" duration="2107000" />
     </task>
+    <task id="LOCAL-00001" summary="更新多地点路径规划">
+      <option name="closed" value="true" />
+      <created>1713077632681</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713077632683</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,10 +128,37 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新多地点路径规划" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新多地点路径规划" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/home/views.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
