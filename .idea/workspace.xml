@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be10a912-2517-420c-a383-8d863eae5a16" name="Changes" comment="更新多地点路径规划">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supermarketqd/src/util/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/util/request.js" afterDir="false" />
-    </list>
+    <list default="true" id="be10a912-2517-420c-a383-8d863eae5a16" name="Changes" comment="bgc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713077632683</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="bgc">
+      <option name="closed" value="true" />
+      <created>1713178589278</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713178589278</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +146,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新多地点路径规划" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新多地点路径规划" />
+    <MESSAGE value="bgc" />
+    <option name="LAST_COMMIT_MESSAGE" value="bgc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
