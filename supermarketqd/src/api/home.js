@@ -89,3 +89,11 @@ export function delete_cart(obj) {
         data: obj
     })
 }
+
+export function delete_all_cart(obj) {
+    return request ({
+        url: '/home/things/cart',
+        method: 'delete',
+        data: obj
+    })
+}

@@ -27,8 +27,8 @@
               </b-navbar-item>
             </b-navbar-dropdown>
             <b-navbar-dropdown label="订单管理">
-              <b-navbar-item href="#">
-                About
+              <b-navbar-item href="/#/test">
+                test
               </b-navbar-item>
             </b-navbar-dropdown>
           </template>

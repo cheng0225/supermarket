@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be10a912-2517-420c-a383-8d863eae5a16" name="Changes" comment="bgc" />
+    <list default="true" id="be10a912-2517-420c-a383-8d863eae5a16" name="Changes" comment="bgc">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarkethd/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/supermarkethd/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/css/app.53a3c6e6aa5ec9ff28ec1397e44c11d1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/css/app.53a3c6e6aa5ec9ff28ec1397e44c11d1.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/app.7f29cfafb6ed4c96edb8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/app.7f29cfafb6ed4c96edb8.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/vendor.9978d8d8f9f23e472d51.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/dist/static/js/vendor.9978d8d8f9f23e472d51.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/src/api/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/api/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/src/util/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/util/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarketqd/src/views/home/cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/supermarketqd/src/views/home/cart.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,24 +55,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "bgc",
-    "last_opened_file_path": "D:/web前端/supermarket",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.file-colors",
-    "ts.external.directory.path": "D:\\app\\PyCharm 2023.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bgc&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/web前端/supermarket&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.file-colors&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\app\\PyCharm 2023.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\web前端\supermarket" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="supermarket" type="Python.DjangoServer" factoryName="Django server">
       <module name="supermarket" />
@@ -98,6 +122,7 @@
       <workItem from="1712740907257" duration="6021000" />
       <workItem from="1712984351250" duration="11774000" />
       <workItem from="1713153308597" duration="2107000" />
+      <workItem from="1719803042949" duration="5143000" />
     </task>
     <task id="LOCAL-00001" summary="更新多地点路径规划">
       <option name="closed" value="true" />
@@ -115,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713178589278</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bgc">
+      <option name="closed" value="true" />
+      <created>1713178852111</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713178852111</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +165,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="bgc" />
+                        <option value="origin/24-04-14" />
                       </list>
                     </value>
                   </entry>
@@ -148,16 +181,5 @@
     <MESSAGE value="更新多地点路径规划" />
     <MESSAGE value="bgc" />
     <option name="LAST_COMMIT_MESSAGE" value="bgc" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/home/views.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

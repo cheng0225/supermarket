@@ -21,6 +21,7 @@
             <el-table-column align="right">
                 <template slot="header" slot-scope="scope">
                     <el-button type=""><a href="/#/cart/route">路线规划</a></el-button>
+                    <el-button @click="del_all_cart()" type="">一键清空</el-button>
                 </template>
             </el-table-column>
             <el-table-column align="right">
@@ -53,7 +54,7 @@
 </style>
     
 <script>
-import { get_cart, delete_cart } from "@/api/home.js"
+import { get_cart, delete_cart, delete_all_cart } from "@/api/home.js"
 export default {
     data() {
         return {
@@ -125,6 +126,7 @@ export default {
             delete_cart(row).then(response => {
                 console.log('响应成功', response);
                 this.msg = 'succeed'
+                location.reload();
             },
                 error => {
                     console.log('连接服务器失败', error);
@@ -168,6 +170,19 @@ export default {
             var distance = r * 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(rad1) * Math.cos(rad2) * Math.pow(Math.sin(b / 2), 2)));
             // 米
             return parseInt(distance);
+        },
+
+        del_all_cart(row) {
+            console.log(row);
+            delete_all_cart(row).then(response => {
+                console.log('响应成功', response);
+                this.msg = 'succeed'
+                location.reload();
+            },
+                error => {
+                    console.log('连接服务器失败', error);
+                    this.msg = "连接服务器失败"
+                })
         },
     }
 }

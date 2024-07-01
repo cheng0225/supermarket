@@ -65,6 +65,11 @@ export default new Router({
     {
       path: '/map',
       component: map
+    },
+    {
+      path: '/test',
+      // 异步引入组件，确保匹配了路由才加载组件，否则不利于优化
+      component: () => import('@/views/home/test.vue')
     }
   ]
 })

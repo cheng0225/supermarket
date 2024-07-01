@@ -36,9 +36,9 @@ class ThingsCartView(GenericAPIView, ListModelMixin, CreateModelMixin):
         # 使用邮箱进行条件筛选
         queryset = ShoppingCart.objects.filter(email=email)
         return queryset
+
     def get(self, request):
         return self.list(request)
-
 
     def post(self, request):
         # request.data._mutable = True
@@ -50,10 +50,18 @@ class ThingsCartView(GenericAPIView, ListModelMixin, CreateModelMixin):
         request.data['email'] = email
         return self.create(request)
 
-    def delete(self, request): # 未完成
+    def delete(self, request):  # 未完成
+        cid = request.data.get('id', 0)
+        # print(request.data)
+        if cid:
+            # print('删除一个')
+            ShoppingCart.objects.get(id=cid).delete()
         # User.objects.get(pk=pk).delete()
-        # return Response(status=status.HTTP_200_OK)
-        return self.destroy(request)
+        else:
+            # print('清空购物车', request.user.email)
+            ShoppingCart.objects.filter(email=request.user.email).delete()
+        return Response(status=200)
+        # return self.destroy(request)
 
 
 class AddThings(GenericAPIView, ListModelMixin, CreateModelMixin):
