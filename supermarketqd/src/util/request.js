@@ -4,8 +4,8 @@ import router from '../router'
 
 //axios.create能创造一个新的axios实例
 const server = axios.create({
-  baseURL: "http://127.0.0.1:8000", //配置请求的url开发环境
-  // baseURL: "http://qiuying.pythonanywhere.com",//上线
+  // baseURL: "http://127.0.0.1:8000", //配置请求的url开发环境
+  baseURL: "http://qiuying.pythonanywhere.com",//上线
   timeout: 6000, //配置超时时间
   headers: {
   }//配置请求头
