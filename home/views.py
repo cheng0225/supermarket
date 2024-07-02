@@ -50,7 +50,7 @@ class ThingsCartView(GenericAPIView, ListModelMixin, CreateModelMixin):
         request.data['email'] = email
         return self.create(request)
 
-    def delete(self, request):  # 未完成
+    def delete(self, request):
         cid = request.data.get('id', 0)
         # print(request.data)
         if cid:
