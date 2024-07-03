@@ -11,7 +11,7 @@ import logs from '@/views/home/logs'
 import cart from '@/views/home/cart'
 import cart_route from '@/views/home/cart_route'
 import map from '@/views/home/map'
-
+import test from '@/views/home/test'
 
 Vue.use(Router)
 
@@ -68,8 +68,12 @@ export default new Router({
     },
     {
       path: '/test',
-      // 异步引入组件，确保匹配了路由才加载组件，否则不利于优化
-      component: () => import('@/views/home/test.vue')
-    }
+      component: test
+    },
+    // {
+    //   path: '/test',
+    //   // 异步引入组件，确保匹配了路由才加载组件，否则不利于优化
+    //   component: () => import('@/views/home/test.vue')
+    // }
   ]
 })
