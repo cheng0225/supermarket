@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # import public.authenticate
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'users',
     'home',
+    'sslserver',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,6 @@ CORS_ALLOW_HEADERS = (
     'pragma',
 )
 
-
 ROOT_URLCONF = 'supermarkethd.urls'
 
 TEMPLATES = [
@@ -105,7 +105,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'supermarkethd.wsgi.application'
-
 
 DATABASES = {
     'default': {
@@ -151,7 +150,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'users', 'static'),  # 用户的静态文件
     # os.path.join(BASE_DIR,app_name,'static'),
-    os.path.join(BASE_DIR,"supermarketqd/dist/static"),
+    os.path.join(BASE_DIR, "supermarketqd/dist/static"),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # 总的？
 
@@ -169,3 +168,13 @@ REST_FRAMEWORK = {
         'public.AuthPermit.MyAuth',  # 获取登录信息
     ),
 }
+
+# # SECURITY安全设置 - 支持http时建议开启
+# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")  # 推荐
+# SECURE_SSL_REDIRECT = True  # 将所有非SSL请求永久重定向到SSL
+# SESSION_COOKIE_SECURE = True  # 仅通过https传输cookie
+# CSRF_COOKIE_SECURE = True  # 仅通过https传输cookie
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # 严格要求使用https协议传输
+# SECURE_HSTS_PRELOAD = True  # HSTS为
+# SECURE_HSTS_SECONDS = 60
+# SECURE_CONTENT_TYPE_NOSNIFF = True  # 防止浏览器猜测资产的内容类型
