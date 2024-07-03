@@ -170,8 +170,8 @@ REST_FRAMEWORK = {
 }
 
 # # SECURITY安全设置 - 支持http时建议开启
-# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")  # 推荐
-# SECURE_SSL_REDIRECT = True  # 将所有非SSL请求永久重定向到SSL
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")  # 推荐
+SECURE_SSL_REDIRECT = True  # 将所有非SSL请求永久重定向到SSL
 # SESSION_COOKIE_SECURE = True  # 仅通过https传输cookie
 # CSRF_COOKIE_SECURE = True  # 仅通过https传输cookie
 # SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # 严格要求使用https协议传输

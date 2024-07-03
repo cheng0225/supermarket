@@ -3,7 +3,7 @@
 
 内置了虚拟环境    
 在supermarket根目录下执行如下两条命令即可食用
-进入虚拟环境（windows） `activate venv`   
+进入虚拟环境（windows） `activate venv`  ubuntu `source venv/Scripts/activate` 
 启动运行django `python manage.py runserver`
 
 前端运行 `npm run dev`   
@@ -18,3 +18,4 @@ git部分
 git branch newBranch
 git checkout newBranch
 ```
+云端进入虚拟环境`source venv/bin/activate`
